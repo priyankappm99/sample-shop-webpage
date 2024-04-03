@@ -1,0 +1,49 @@
+.carousel-row {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    margin-bottom: 20px; /* Add spacing between rows, adjust as needed */
+  }
+  
+  .carousel-image {
+    width: 20%; /* Adjust as needed */
+    height: 10%;
+    min-height: 10%;
+    border: 1px solid #ccc; /* Add borders for image separation, adjust as needed */
+    box-sizing: border-box; /* Include border in width calculations */
+  }
+  
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    border: none;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-dot.active {
+    background-color: #333;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }

@@ -1,0 +1,151 @@
+.common-font {
+    font-family: 'Poppins' !important;
+  }
+  
+  .text-extra-small {
+    @extend .common-font;
+    font-size: 10px !important;
+  }
+  
+  .text-small {
+    @extend .common-font;
+    font-size: 12px !important;
+  }
+  
+  .text-medium {
+    @extend .common-font;
+    font-size: 14px !important;
+  }
+  
+  .text-base {
+    @extend .common-font;
+    font-size: 16px !important;
+  }
+  
+  .text-large {
+    @extend .common-font;
+    font-size: 20px !important;
+  }
+  
+  .text-extra-large {
+    @extend .common-font;
+    font-size: 28px !important;
+  }
+  
+  .text-700 {
+    font-weight: 700 !important;
+  }
+  
+  .text-600 {
+    font-weight: 600 !important;
+  }
+  
+  .text-500 {
+    font-weight: 500 !important;
+  }
+  
+  .text-400 {
+    font-weight: 400 !important;
+  }
+  
+  .green-text {
+    color: #56ca00;
+  }
+  
+  .red-text {
+    color: #FF0000;
+  }
+  
+  .grey-text {
+    color: #6d6d6d;
+  }
+  
+  .grey-text-500 {
+    color: #53566C
+  }
+  
+  .flex-row {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-row-center {
+    @extend .flex-row;
+    align-items: center !important;
+  }
+  
+  .flex-row-space-between {
+    @extend .flex-row;
+    justify-content: space-between !important;
+  }
+  
+  .fullHeight {
+    height: 100vh !important;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .background-theme {
+    background-color: #f2f4f7;
+  }
+  
+  .white-background {
+    background-color: #fff;
+  }
+  
+  .grid-container {
+    background-color: #f2f4f7;
+    padding: 16px;
+  }
+  
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+  
+  .grid-column {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  .col-span-3 {
+    grid-column: span 3;
+  }
+  
+  .col-span-4 {
+    grid-column: span 4;
+  }
+  
+  .col-span-6 {
+    grid-column: span 6;
+  }
+  
+  .col-span-9 {
+    grid-column: span 9;
+  }
+  
+  .col-span-2 {
+    grid-column: span 2;
+  }
+  
+  .col-span-8 {
+    grid-column: span 8;
+  }
+  
+  .col-span-12 {
+    grid-column: span 12;
+  }
+  
+  .text-wrap {
+    white-space: nowrap;
+  }
+  

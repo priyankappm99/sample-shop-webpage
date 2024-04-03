@@ -1,38 +1,102 @@
-.App {
+/* App.css */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Home.css */
+
+.home {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-images {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-x: scroll;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  width: 100%;
+  white-space: nowrap; /* Prevent images from wrapping */
 }
 
-.App-link {
-  color: #61dafb;
+.product-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 10px;
+  animation: float 5s infinite ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes float {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-20px);
   }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ProductList.css */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: calc(30% - 20px); /* Adjust width to fit 3 products in a row with space between */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* Ensure flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center-align items horizontally */
+}
+
+.product-image-container {
+  width: 100%; /* Ensure the image container fills the width of the product */
+  height: 150px; /* Set the height of the image container */
+  overflow: hidden; /* Hide any overflowing image parts */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.product-image1 {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit:contain; /* Ensure the image covers the entire container */
+}
+
+.product-details {
+  padding: 10px;
+  text-align: center;
 }
