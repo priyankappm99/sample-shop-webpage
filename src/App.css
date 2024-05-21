@@ -21,7 +21,7 @@ body {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #5CC8BE;
   color: white;
   padding: 20px;
   text-align: center;
@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 20px;
 }
 
 .product {
@@ -93,10 +94,44 @@ body {
 .product-image1 {
   width: 100%; /* Make the image fill the container */
   height: 100%; /* Make the image fill the container */
-  object-fit:contain; /* Ensure the image covers the entire container */
+  object-fit:cover; /* Ensure the image covers the entire container */
 }
 
 .product-details {
   padding: 10px;
   text-align: center;
+}
+
+/* #app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+} */
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }

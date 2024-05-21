@@ -17,12 +17,12 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
     <div className="product-list">
       {products.map(product => (
-        <div key={product.id} className="product">
+        <div key={product.id} >
           <Link to={`/product/${product.id}`} className="product-link">
             <div className="product-image-container">
               <img src={product.imageUrl} alt={product.name} className="product-image1" />
             </div>
-            <div className="product-details">
+            <div className="product-details cyan-text">
               <h3>{product.name}</h3>
               <p>Price: ${product.price}</p>
             </div>

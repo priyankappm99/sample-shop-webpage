@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from '../../components/Home';
 import ProductList from '../../components/ProductList';
 import Cart from '../../components/cart/Cart';
 import TopBar from '../../components/topBar/TopBar';
 import Footer from '../../components/footer/Footer';
+import { PRODUCTS } from '../../constants/ProductsJson';
+import ProductDetails from '../../components/ProductDetails';
 
 // Define the props interface
 interface DashBoardProps {
@@ -31,15 +33,7 @@ const DashBoard: React.FC<DashBoardProps> = ({  }) => {
       pdf.save('document.pdf');
     });
   };
-  const products = [
-    { id: '1', imageUrl: 'photoframe1.jpg', name: 'Product 1', price: 10 },
-    { id: '2', imageUrl: 'photoframe1.jpg', name: 'Product 2', price: 20 },
-    { id: '3', imageUrl: 'photoframe1.jpg', name: 'Product 3', price: 30 },
-    { id: '4', imageUrl: 'photoframe1.jpg', name: 'Product 4', price: 30 },
-     { id: '5', imageUrl: 'photoframe1.jpg', name: 'Product 5', price: 30 },
-     { id: '6', imageUrl: 'photoframe1.jpg', name: 'Product 6', price: 30 },
-    // Add more products as needed
-  ];
+
   return (
     <Router>
       <div className="app" ref={contentRef}>
@@ -47,11 +41,12 @@ const DashBoard: React.FC<DashBoardProps> = ({  }) => {
         <main className="main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<ProductList products={products} />} />
+            <Route path="/products" element={<ProductList products={PRODUCTS} />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/product/:productId" element={<ProductDetails />} />
+
           </Routes>
         </main>
-
        < Footer/>
       </div>
       <div >
